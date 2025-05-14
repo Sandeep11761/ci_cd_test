@@ -1,0 +1,29 @@
+name: React Deploy to Windows IIS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build React App
+        run: npm run build
+
+      - name: Deploy to IIS (C:\inetpub\wwwroot\your-react-app)
+        run: |
+          robocopy build "C:\inetpub\wwwroot" /MIR
