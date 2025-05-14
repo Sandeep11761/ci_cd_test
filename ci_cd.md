@@ -18,3 +18,5 @@ $ ./run.cmd
 
 # This runner will have the following labels: 'self-hosted', 'Windows', 'X64'
 
+# service name: actions.runner.Sandeep11761-ci_cd_test.DESKTOP-G592QSN  Restart-Service "actions.runner.YOUR_RUNNER_NAME"
+# Restart-Service " actions.runner.Sandeep11761-ci_cd_test.DESKTOP-G592QSN" 
