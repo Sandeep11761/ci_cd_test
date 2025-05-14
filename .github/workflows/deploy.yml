@@ -27,3 +27,4 @@ jobs:
       - name: Deploy to IIS (C:\inetpub\wwwroot\your-react-app)
         run: |
           robocopy dist "C:\inetpub\wwwroot" /MIR
+          exit 0
