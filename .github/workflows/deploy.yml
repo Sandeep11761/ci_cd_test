@@ -26,7 +26,7 @@ jobs:
 
       - name: Deploy to IIS (Wait for 5 minutes)  
         run: |
-          robocopy dist "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\myapp\WEB-INF\web.xml" /MIR
+          robocopy dist "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\myapp" /MIR
           exit 0
 
 
